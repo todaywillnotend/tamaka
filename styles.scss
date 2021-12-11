@@ -367,7 +367,6 @@ template {
 
 .header {
 	&__content {
-		height: 300px;
 		width: 1215px;
 	}
 
@@ -442,5 +441,34 @@ template {
 			line-height: 20px;
 		}
 	}
+}
+
+.main {
+	.collection {
+		margin-top: 20px;
+		width: 100%;
+		
+		&__content {
+			background: url(./img/new-collections.png) no-repeat center / cover;
+			height: 575px;
+			position: relative;
+
+			
+		}
+
+		&__text {
+			position: absolute;
+			top: 415px;
+			left: 25px;
+			height: 125px;
+			width: 400px;
+			background-color: rgba(0, 0, 0, .67);
+			text-align: center;
+			font-size: 64px;
+			color: white;
+			line-height: 58px;
+		}
+	}
+
 }
 
