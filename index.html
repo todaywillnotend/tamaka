@@ -14,26 +14,30 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__content">
-					<div class="buttons">
-						<label>
-							<input name='category' value="male" type='radio'>
-							Мужское
-						</label>
-						<label>
-							<input name='category' value="female" type='radio'>
-							Женское
-						</label>
-					</div>
-					<div class="logo">
-						<img src="images/logo.svg" alt="logo">
-					</div>
-					<div class="service">
-						<div class="search">
-							<input type="text" name='search'>
+					<div class="header__top">
+						<div class="category-buttons">
+							<div class="category-buttons__button">
+								<input id="male" class="category-buttons__radio" name='category' value="male"
+									type='radio'>
+								<label for="male">Мужское</label>
+							</div>
+							<div class="category-buttons__button">
+								<input id='female' class="category-buttons__radio" name='category' value="female"
+									type='radio'>
+								<label for='female'>Женское</label>
+							</div>
 						</div>
-						<div class="shopping-cart">
-							<div class="icon"></div>
-							<span>Корзина</span>
+						<div class="logo">
+							<img src="images/logo.svg" alt="logo">
+						</div>
+						<div class="service">
+							<div class="search">
+								<input type="text" name='search'>
+							</div>
+							<div class="shopping-cart">
+								<div class="icon"></div>
+								<span>Корзина</span>
+							</div>
 						</div>
 					</div>
 				</div>
