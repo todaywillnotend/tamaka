@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-	<title>Document</title>
-</head>
-
-<body>
-	<section class="wrapper">
-		<header class="header">
-			<div class="container">
-				<div class="header__content">
-					<div class="header__top">
-						<div class="category-buttons">
-							<div class="category-buttons__button">
-								<input id="male" class="category-buttons__radio" name='category' value="male"
-									type='radio'>
-								<label for="male">Мужское</label>
-							</div>
-							<div class="category-buttons__button">
-								<input id='female' class="category-buttons__radio" name='category' value="female"
-									type='radio'>
-								<label for='female'>Женское</label>
-							</div>
-						</div>
-						<div class="logo">
-							<img src="img/logo.svg" alt="logo">
-						</div>
-						<div class="service">
-							<div class="search">
-								<input type="text" name='search'>
-							</div>
-							<div class="shopping-cart">
-								<div class="icon"></div>
-								<span>Корзина</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-	</section>
-</body>
-
+  <body>
+    <section class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__top">
+              <div class="category-buttons">
+                <div class="category-buttons__button">
+                  <input
+                    id="male"
+                    class="category-buttons__radio"
+                    name="category"
+                    value="male"
+                    type="radio"
+                  />
+                  <label for="male">Мужское</label>
+                </div>
+                <div class="category-buttons__button">
+                  <input
+                    id="female"
+                    class="category-buttons__radio"
+                    name="category"
+                    value="female"
+                    type="radio"
+                  />
+                  <label for="female">Женское</label>
+                </div>
+              </div>
+              <div class="logo">
+                <img src="img/logo.svg" alt="logo" />
+              </div>
+              <div class="service">
+                <div class="search">
+                  <input
+                    type="text"
+                    name="search"
+                    placeholder="Поиск по сайту"
+                  />
+                </div>
+                <div class="shopping-cart">
+                  <div class="icon"></div>
+                  <span>Корзина</span>
+                </div>
+              </div>
+            </div>
+            <div class="header__bottom">
+              <a href="#">МЕДИЦИНСКАЯ ОЖЕЖДА</a>
+              <a href="#">ПОВСЕДНЕВНАЯ ОДЕЖДА</a>
+              <a href="#">ВЕЧЕРНЯЯ ОДЕЖДА</a>
+              <a href="#">АКСЕССУАРЫ</a>
+            </div>
+          </div>
+        </div>
+      </header>
+  </body>
 </html>
