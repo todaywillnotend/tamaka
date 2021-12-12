@@ -359,60 +359,6 @@ $width1280: 1290px;
 
 $black: #333333;
 
-@keyframes burgerTopAnimation {
-	0% {
-		top: -5px;
-	}
-
-	25% {
-		top: 0;
-	}
-
-	75% {
-		top: 0;
-		transform: rotate(0deg);
-	}
-
-	100% {
-		top: 0;
-		transform: rotate(45deg);
-	}
-}
-
-@keyframes burgerBottomAnimation {
-	0% {
-		bottom: -5px;
-	}
-
-	25% {
-		bottom: 0;
-	}
-
-	75% {
-		bottom: 0;
-		transform: rotate(0deg);
-	}
-
-	100% {
-		bottom: 0;
-		transform: rotate(-45deg);
-	}
-}
-
-@keyframes burgerMiddleAnimation {
-	0% {
-		background-color: $black;
-	}
-
-	25% {
-		background-color: transparent;
-	}
-
-	100% {
-		background-color: transparent;
-	}
-}
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -460,92 +406,9 @@ $black: #333333;
 		}
 
 		.category-buttons {
-			display: flex;
-			width: 275px;
-
-			@media (max-width: $width1024) {
-				width: 75px;
-			}
-
 			&__button {
-				width: 120px;
-				height: 40px;
-
 				@media (max-width: $width1024) {
 					display: none;
-				}
-
-				label {
-          cursor: pointer;
-					width: 100%;
-					height: 100%;
-					display: block;
-					padding: 5px 15px;
-					font-size: 24px;
-					text-align: center;
-					transition: all 0.2s ease-in-out;
-				}
-			}
-
-			&__radio {
-				display: none;
-				height: 40px;
-
-				&:checked + label {
-					background-color: $black;
-					color: white;
-				}
-			}
-
-			&__burger {
-				height: 11px;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				display: none;
-
-				@media (max-width: $width1024) {
-					display: flex;
-				}
-
-				span {
-					width: 18px;
-					height: 1px;
-					display: block;
-					background-color: $black;
-					position: relative;
-
-					&::before {
-						content: "";
-						display: block;
-						position: absolute;
-						background-color: $black;
-						width: 100%;
-						height: 100%;
-						top: -5px;
-					}
-					&::after {
-						content: "";
-						display: block;
-						position: absolute;
-						background-color: $black;
-						width: 100%;
-						height: 100%;
-						bottom: -5px;
-					}
-				}
-
-				&--show {
-					span {
-						animation: burgerMiddleAnimation 0.5s forwards;
-						&::before {
-							animation: burgerTopAnimation 0.5s forwards;
-						}
-
-						&::after {
-							animation: burgerBottomAnimation 0.5s forwards;
-						}
-					}
 				}
 			}
 		}
@@ -673,9 +536,87 @@ $black: #333333;
 			text-decoration: none;
 			color: black;
 			font-size: 18px;
-      font-weight: 500;
+			font-weight: 500;
 			margin: 0 10px;
 			line-height: 20px;
+		}
+	}
+}
+
+.category-buttons {
+	display: flex;
+	width: 275px;
+
+	@media (max-width: $width1024) {
+		width: 75px;
+	}
+
+	&__button {
+		width: 120px;
+		height: 40px;
+
+		@media (max-width: $width1024) {
+			// display: none;
+		}
+
+		label {
+			cursor: pointer;
+			width: 100%;
+			height: 100%;
+			display: block;
+			padding: 5px 15px;
+			font-size: 24px;
+			text-align: center;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+
+	&__radio {
+		display: none;
+		height: 40px;
+
+		&:checked + label {
+			background-color: $black;
+			color: white;
+		}
+	}
+
+	&__burger {
+		height: 11px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		display: none;
+
+		@media (max-width: $width1024) {
+			display: flex;
+		}
+
+		span {
+			width: 18px;
+			height: 1px;
+			display: block;
+			background-color: $black;
+			position: relative;
+
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				background-color: $black;
+				width: 100%;
+				height: 100%;
+				top: -5px;
+			}
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				background-color: $black;
+				width: 100%;
+				height: 100%;
+				bottom: -5px;
+			}
 		}
 	}
 }
@@ -867,4 +808,61 @@ $black: #333333;
 			color: black;
 		}
 	}
+}
+
+.drawer {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 3;
+	// background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	transition: transform 0.3s ease-in-out;
+
+	&__content {
+		background-color: white;
+		width: 260px;
+		height: 100%;
+
+		.category-buttons {
+			width: 100%;
+
+			&__button {
+				width: 50%;
+			}
+		}
+
+		.category-list {
+			margin-top: 18px;
+
+			&__item {
+				padding: 8px 10px;
+				border-top: 1px solid #eeeeee;
+				border-bottom: 1px solid #eeeeee;
+				color: black;
+				text-decoration: none;
+				text-transform: none;
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	&__void {
+		background-color: rgba(0, 0, 0, 0.5);
+		width: 1px;
+		height: 100%;
+		flex-grow: 1;
+		// transition: all 1s linear;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.hidden-left {
+	transform: translateX(-100%);
 }
