@@ -468,7 +468,7 @@ $black: #333333;
 			}
 
 			&__button {
-				width: 90px;
+				width: 120px;
 				height: 40px;
 
 				@media (max-width: $width1024) {
@@ -476,11 +476,12 @@ $black: #333333;
 				}
 
 				label {
+          cursor: pointer;
 					width: 100%;
 					height: 100%;
 					display: block;
-					padding: 11px 15px;
-					font-size: 14px;
+					padding: 5px 15px;
+					font-size: 24px;
 					text-align: center;
 					transition: all 0.2s ease-in-out;
 				}
@@ -671,7 +672,8 @@ $black: #333333;
 		a {
 			text-decoration: none;
 			color: black;
-			font-size: 14px;
+			font-size: 18px;
+      font-weight: 500;
 			margin: 0 10px;
 			line-height: 20px;
 		}
