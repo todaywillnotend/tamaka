@@ -601,4 +601,74 @@ template {
 .footer__text__links {
   height: 190px;
 }
+
+.footer__links {
+  margin: 80px auto 140px;
+  width: 820px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__links .contact {
+  height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__links .contact span {
+  font-size: 18px;
+}
+
+.footer__links .contact .phone {
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__links .contact .phone span {
+  font-size: 18px;
+}
+
+.footer__links .contact .email {
+  font-size: 24px;
+}
+
+.footer__links .instagram {
+  height: 140px;
+}
+
+.footer__links .instagram .link {
+  margin: 27px 0 0;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__links .instagram .link span {
+  font-size: 18px;
+  margin-left: 20px;
+}
 /*# sourceMappingURL=styles.css.map */
