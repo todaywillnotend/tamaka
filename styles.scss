@@ -428,20 +428,19 @@ $black: #333333;
 
 					input {
 						display: none;
+					}
 
-						&::before {
-							content: "";
-							display: block;
-							position: absolute;
-							right: 0;
-							top: 0;
-							width: 100%;
-							height: 100%;
-							background-image: url(img/icon-search.svg);
-							background-repeat: no-repeat;
-							background-size: 70%;
-							background-position: center;
-						}
+					&-icon {
+						display: block;
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 35px;
+						height: 35px;
+						background-image: url(img/icon-search.svg);
+						background-repeat: no-repeat;
+						background-size: 70%;
+						background-position: center;
 					}
 				}
 
@@ -454,19 +453,18 @@ $black: #333333;
 
 			.search {
 				position: relative;
-				&::before {
-					content: "";
+
+				&-icon {
 					display: block;
 					position: absolute;
-					right: 10px;
-					top: calc(100% - 30px);
-					width: 20px;
-					height: 20px;
+					right: 5px;
+					top: 0;
+					width: 35px;
+					height: 100%;
 					background-image: url(img/icon-search.svg);
 					background-repeat: no-repeat;
-					background-size: cover;
-					z-index: 2;
-					cursor: pointer;
+					background-size: 70%;
+					background-position: center;
 				}
 
 				input {
@@ -838,7 +836,7 @@ $black: #333333;
 			margin-top: 18px;
 
 			&__item {
-				padding: 8px 10px;
+				padding: 15px 10px;
 				border-top: 1px solid #eeeeee;
 				border-bottom: 1px solid #eeeeee;
 				color: black;
@@ -859,10 +857,77 @@ $black: #333333;
 	}
 }
 
+.search-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: 3;
+	transition: all 0.2s ease-in-out;
+
+	&__content {
+		display: flex;
+		align-items: center;
+		padding: 5px 10px;
+
+		input {
+			width: calc(100% - 70px);
+			height: 40px;
+			border: 1px solid black;
+			border-radius: 20px;
+			font-size: 14px;
+			padding-left: 20px;
+
+			&::placeholder {
+				color: #303030;
+			}
+		}
+	}
+
+	&__icon-search {
+		width: 40px;
+		height: 40px;
+		background-image: url(img/icon-search.svg);
+		background-repeat: no-repeat;
+		background-size: 70%;
+		background-position: center;
+	}
+
+	&__button-close {
+		width: 40px;
+		height: 40px;
+		position: relative;
+
+		span {
+			width: 80%;
+			height: 2px;
+			display: block;
+			background-color: $black;
+			position: absolute;
+			top: calc(50% - 2px);
+			left: calc(50% - 13px);
+
+			&:first-child {
+				transform: rotate(45deg);
+			}
+
+			&:last-child {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
 .hidden {
 	display: none;
 }
 
 .hidden-left {
 	transform: translateX(-100%);
+}
+
+.hidden-top {
+	transform: translateY(-100%);
 }
