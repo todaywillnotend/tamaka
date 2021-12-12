@@ -453,13 +453,12 @@ template {
 		&__content {
 			background: url(./img/collection-main.png) no-repeat center / cover;
 			height: 575px;
-			position: relative;
 		}
 
 		&__text {
-			position: absolute;
-			top: 415px;
-			left: 25px;
+      display: inline-block;
+      margin-top: 420px;
+      margin-left: 30px;
 			height: 125px;
 			width: 400px;
 			background-color: rgba(0, 0, 0, 0.67);
