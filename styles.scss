@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -353,6 +353,7 @@ template {
 }
 
 $width320: 330px;
+$width425: 440px;
 $width768: 775px;
 $width1024: 1020px;
 $width1280: 1290px;
@@ -385,6 +386,10 @@ $black: #333333;
 }
 
 .header {
+	@media (max-width: $width1024) {
+		border-bottom: 1px solid #aaaaaa;
+	}
+
 	&__top {
 		display: flex;
 		height: 110px;
@@ -392,8 +397,9 @@ $black: #333333;
 		align-items: center;
 
 		@media (max-width: $width1024) {
-			margin-top: 20px;
+			margin-top: 10px;
 			height: auto;
+			padding: 10px 0;
 		}
 
 		.logo {
@@ -463,8 +469,12 @@ $black: #333333;
 					height: 100%;
 					background-image: url(img/icon-search.svg);
 					background-repeat: no-repeat;
-					background-size: 70%;
+					background-size: 60%;
 					background-position: center;
+
+					@media (max-width: $width1024) {
+						background-position: right;
+					}
 				}
 
 				input {
@@ -628,30 +638,71 @@ $black: #333333;
 		&__content {
 			background: url(./img/collection-main.png) no-repeat center / cover;
 			height: 575px;
+			position: relative;
+
+			@media (max-width: $width1024) {
+				height: 350px;
+			}
+
+			@media (max-width: $width425) {
+				height: 200px;
+			}
 		}
 
 		&__text {
-			display: inline-block;
-			margin-top: 420px;
-			margin-left: 30px;
-			height: 125px;
-			width: 400px;
+			display: block;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			bottom: 5%;
+			left: 2%;
 			background-color: rgba(0, 0, 0, 0.67);
 			text-align: center;
-			font-size: 64px;
 			color: white;
-			line-height: 58px;
+			padding: 5px;
+
+			span {
+				font-size: 58px;
+				font-family: "Cinzel", serif;
+
+				@media (max-width: $width1024) {
+					font-size: 40px;
+				}
+
+				@media (max-width: $width425) {
+					font-size: 20px;
+				}
+			}
 		}
 	}
 
 	.new {
 		width: 100%;
-		margin-top: 50px;
+		margin-top: 20px;
+
+		@media (max-width: $width768) {
+			margin-top: 10px;
+		}
+
 		h1 {
 			font-weight: 500;
 			margin: 0;
 			text-align: center;
 			font-size: 28px;
+			padding: 30px 0;
+
+			@media (max-width: $width1024) {
+				padding: 25px 0;
+				font-size: 24px;
+			}
+			@media (max-width: $width768) {
+				font-size: 23px;
+			}
+
+			@media (max-width: $width425) {
+				padding: 15px 0;
+				font-size: 17px;
+			}
 		}
 
 		&__content {
@@ -680,11 +731,31 @@ $black: #333333;
 
 	.popular {
 		width: 100%;
-		margin-top: 50px;
+		margin-top: 20px;
+
+		@media (max-width: $width768) {
+			margin-top: 10px;
+		}
 
 		h1 {
 			font-weight: 500;
+			margin: 0;
 			text-align: center;
+			font-size: 28px;
+			padding: 30px 0;
+
+			@media (max-width: $width1024) {
+				padding: 25px 0;
+				font-size: 24px;
+			}
+			@media (max-width: $width768) {
+				font-size: 23px;
+			}
+
+			@media (max-width: $width425) {
+				padding: 15px 0;
+				font-size: 17px;
+			}
 		}
 
 		&__content {
@@ -710,6 +781,49 @@ $black: #333333;
 			}
 		}
 	}
+
+	.info {
+		margin: 94px 0 0;
+
+		&__text {
+			margin: 0 auto;
+			padding: 0 100px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@media (max-width: $width768) {
+				padding: 0 50px;
+			}
+
+			@media (max-width: $width425) {
+				padding: 0 20px;
+			}
+
+			span {
+				font-size: 24px;
+				margin-bottom: 20px;
+
+				@media (max-width: $width425) {
+					font-size: 20px;
+				}
+			}
+
+			p {
+				font-size: 24px;
+				letter-spacing: 4%;
+				text-align: center;
+
+				@media (max-width: $width768) {
+					font-size: 20px;
+				}
+
+				@media (max-width: $width425) {
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
 
 .footer {
@@ -717,29 +831,9 @@ $black: #333333;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
-	margin: 94px 0 0;
+	// margin: 94px 0 0;
 	height: 600px;
 	background: url(./img/background-bottom.svg) no-repeat bottom center / contain;
-
-	&__text {
-		margin: 0 auto;
-		width: 1010px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		height: 157px;
-
-		span {
-			font-size: 24px;
-		}
-
-		p {
-			font-size: 24px;
-			letter-spacing: 4%;
-			text-align: center;
-		}
-	}
 
 	&__links {
 		margin: 80px auto 140px;
@@ -871,6 +965,7 @@ $black: #333333;
 		display: flex;
 		align-items: center;
 		padding: 5px 10px;
+		margin-top: 12px;
 
 		input {
 			width: calc(100% - 70px);
