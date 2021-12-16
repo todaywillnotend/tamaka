@@ -1,0 +1,46 @@
+.drawer {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+
+  &__content {
+    background-color: white;
+    width: 260px;
+    height: 100%;
+
+    .category-buttons {
+      width: 100%;
+
+      &__button {
+        width: 50%;
+      }
+    }
+
+    .category-list {
+      margin-top: 18px;
+
+      &__item {
+        padding: 15px 10px;
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        color: black;
+        text-decoration: none;
+        text-transform: none;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__void {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 1px;
+    height: 100%;
+    flex-grow: 1;
+  }
+}

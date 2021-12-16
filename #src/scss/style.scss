@@ -1,0 +1,74 @@
+// Миксины
+@import 'mixins';
+
+// Шрифты
+// &display=swap
+// &subset=cyrillic-ext
+
+@import 'fonts';
+
+// Иконочные шрифты
+@import 'icons';
+
+// Шрифт по умолчанию
+// $fontFamily: "";
+
+// Миксины
+@import 'mixins';
+
+// Шрифты
+// &display=swap
+// &subset=cyrillic-ext
+
+@import 'fonts';
+
+// Иконочные шрифты
+@import 'icons';
+
+// Шрифт по умолчанию
+// $fontFamily: "";
+
+@import 'null';
+
+$width320: 330px;
+$width425: 440px;
+$width768: 775px;
+$width1024: 1020px;
+$width1280: 1290px;
+
+$black: #333333;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: white;
+}
+
+.container {
+  width: 1215px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: $width1280) {
+    width: 100%;
+  }
+}
+
+@import 'common';
+@import 'header';
+@import 'collection';
+@import 'new';
+@import 'popular';
+@import 'info';
+@import 'footer';
+@import 'drawer';
+@import 'popup-search';

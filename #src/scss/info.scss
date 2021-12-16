@@ -1,0 +1,42 @@
+.info {
+  margin: 94px 0 0;
+
+  &__text {
+    margin: 0 auto;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $width768) {
+      padding: 0 50px;
+    }
+
+    @media (max-width: $width425) {
+      padding: 0 20px;
+    }
+
+    span {
+      font-size: 24px;
+      margin-bottom: 20px;
+
+      @media (max-width: $width425) {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      letter-spacing: 4%;
+      text-align: center;
+
+      @media (max-width: $width768) {
+        font-size: 20px;
+      }
+
+      @media (max-width: $width425) {
+        font-size: 16px;
+      }
+    }
+  }
+}

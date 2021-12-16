@@ -1,0 +1,45 @@
+.collection {
+  margin-top: 20px;
+  width: 100%;
+  background: url(./../img/background-top.svg) no-repeat center left;
+
+  &__content {
+    background: url(./../img/collection-main.png) no-repeat center / cover;
+    height: 575px;
+    position: relative;
+
+    @media (max-width: $width1024) {
+      height: 350px;
+    }
+
+    @media (max-width: $width425) {
+      height: 200px;
+    }
+  }
+
+  &__text {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    background-color: rgba(0, 0, 0, 0.67);
+    text-align: center;
+    color: white;
+    padding: 5px;
+
+    span {
+      font-size: 58px;
+      font-family: 'Cinzel', serif;
+
+      @media (max-width: $width1024) {
+        font-size: 40px;
+      }
+
+      @media (max-width: $width425) {
+        font-size: 20px;
+      }
+    }
+  }
+}
