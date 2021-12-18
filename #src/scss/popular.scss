@@ -29,20 +29,29 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 400px;
+    justify-content: center;
+    margin: 10px 0;
+    min-width: 295px;
+
+    @media (max-width: $width425) {
+      margin: 0 2.5px;
+    }
 
     img {
-      height: 355px;
-      width: 398px;
-      object-fit: cover;
+      // width: 295px;
+      // height: 300px;
+      // object-fit: cover;
+      // width: 100%;
+      max-width: 90%;
+      padding-bottom: 12px;
     }
 
     span {

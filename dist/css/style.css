@@ -403,6 +403,10 @@ select {
   max-height: 300px;
 }
 
+.new__card__img {
+  width: 100%;
+}
+
 .new__card img {
   width: 100%;
 }
@@ -428,9 +432,11 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .popular__card {
@@ -444,17 +450,16 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+  min-width: 295px;
 }
 
 .popular__card img {
-  height: 355px;
-  width: 398px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-width: 90%;
+  padding-bottom: 12px;
 }
 
 .popular__card span {
@@ -888,6 +893,10 @@ select {
   .popular h1 {
     padding: 15px 0;
     font-size: 17px;
+  }
+
+  .popular__card {
+    margin: 0 2.5px;
   }
 
   .info__text {
