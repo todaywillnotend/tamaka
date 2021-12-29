@@ -881,6 +881,55 @@ select {
   content: "";
 }
 
+.spoiler input,
+.spoiler div {
+  display: none;
+  /* Скрываем содержимое */
+  -webkit-transition: display 0.15s ease-in-out;
+  -o-transition: display 0.15s ease-in-out;
+  transition: display 0.15s ease-in-out;
+}
+
+.spoiler label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.spoiler label::before {
+  content: "";
+  /* Текст перед заголовком */
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/arrow-top.svg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  /* Расстояние до текста */
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: -webkit-transform 0.15s ease-in-out;
+  -o-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+}
+
+/* Открытый спойлер */
+
+.spoiler :checked + label::before {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.spoiler :checked ~ div {
+  display: block;
+  /* Показываем спойлер */
+  padding: 10px;
+  /* Поля вокруг текста */
+}
+
 @media (max-width: 1290px) {
   .container {
     width: 100%;

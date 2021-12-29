@@ -1,0 +1,57 @@
+.spoiler input,
+.spoiler div {
+	display: none; /* Скрываем содержимое */
+	transition: display 0.15s ease-in-out;
+}
+
+.spoiler label {
+	display: flex;
+}
+
+.spoiler label::before {
+	content: ""; /* Текст перед заголовком */
+	width: 25px;
+	height: 25px;
+	background-image: url(../img/arrow-top.svg);
+	transform: rotate(180deg);
+	background-repeat: no-repeat;
+	margin-right: 5px; /* Расстояние до текста */
+	transition: transform 0.15s ease-in-out;
+}
+/* Открытый спойлер */
+.spoiler :checked + label::before {
+	transform: none;
+}
+.spoiler :checked ~ div {
+	display: block; /* Показываем спойлер */
+	padding: 10px; /* Поля вокруг текста */
+}
+
+// .spoiler {
+// 	label {
+// 		display: flex;
+// 	}
+
+// 	input,
+// 	div {
+// 		display: none; /* Скрываем содержимое */
+// 	}
+
+// 	label::before {
+// 		content: ""; /* Текст перед заголовком */
+// 		width: 25px;
+// 		height: 25px;
+// 		background-image: url(../img/arrow-top.svg);
+// 		background-repeat: no-repeat;
+// 		margin-right: 5px; /* Расстояние до текста */
+// 	}
+
+// 	&:checked + label::before {
+// 		content: "▼";
+// 	}
+
+// 	&:checked ~ div {
+// 		display: block; /* Показываем спойлер */
+// 		padding: 10px; /* Поля вокруг текста */
+// 	}
+// }
