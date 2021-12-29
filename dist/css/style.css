@@ -837,6 +837,7 @@ select {
   vertical-align: middle;
   color: #aaaaaa;
   position: relative;
+  cursor: pointer;
 }
 
 .nav__item::after {
@@ -894,6 +895,7 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .spoiler label::before {

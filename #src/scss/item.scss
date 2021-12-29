@@ -6,6 +6,7 @@
 
 .spoiler label {
 	display: flex;
+	cursor: pointer;
 }
 
 .spoiler label::before {
