@@ -90,7 +90,7 @@ select {
 }
 
 .wrapper {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   width: 100%;
   min-height: 100vh;
@@ -386,6 +386,8 @@ select {
 }
 
 .new h1 {
+  font-family: Cormorant Garamond;
+  font-style: normal;
   font-weight: 500;
   margin: 0;
   text-align: center;
@@ -429,7 +431,10 @@ select {
 }
 
 .popular h1 {
+  font-family: Cormorant Garamond;
+  font-style: normal;
   font-weight: 500;
+  font-size: 24px;
   margin: 0;
   text-align: center;
   font-size: 28px;
@@ -765,6 +770,32 @@ select {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.catalog .container {
+  max-width: 950px;
+}
+
+.catalog .popular__card {
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.catalog .popular__card img {
+  max-width: 100%;
+}
+
+.catalog .popular__card:hover {
+  -webkit-transform: translateY(-5px) scale(1.005);
+      -ms-transform: translateY(-5px) scale(1.005);
+          transform: translateY(-5px) scale(1.005);
+  -webkit-box-shadow: 0px 0px 5px inset #dbdbdb;
+          box-shadow: 0px 0px 5px inset #dbdbdb;
 }
 
 @media (max-width: 1290px) {

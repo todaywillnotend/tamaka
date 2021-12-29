@@ -1,34 +1,22 @@
+// Шрифт по умолчанию
+// $fontFamily: "";
+
 // Миксины
-@import 'mixins';
+@import "mixins";
 
 // Шрифты
 // &display=swap
 // &subset=cyrillic-ext
 
-@import 'fonts';
+@import "fonts";
 
 // Иконочные шрифты
-@import 'icons';
+@import "icons";
 
 // Шрифт по умолчанию
 // $fontFamily: "";
 
-// Миксины
-@import 'mixins';
-
-// Шрифты
-// &display=swap
-// &subset=cyrillic-ext
-
-@import 'fonts';
-
-// Иконочные шрифты
-@import 'icons';
-
-// Шрифт по умолчанию
-// $fontFamily: "";
-
-@import 'null';
+@import "null";
 
 $width320: 330px;
 $width425: 440px;
@@ -46,7 +34,7 @@ $black: #333333;
 }
 
 .wrapper {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   width: 100%;
   min-height: 100vh;
@@ -64,12 +52,13 @@ $black: #333333;
   }
 }
 
-@import 'common';
-@import 'header';
-@import 'collection';
-@import 'new';
-@import 'popular';
-@import 'info';
-@import 'footer';
-@import 'drawer';
-@import 'popup-search';
+@import "common";
+@import "header";
+@import "collection";
+@import "new";
+@import "popular";
+@import "info";
+@import "footer";
+@import "drawer";
+@import "popup-search";
+@import "catalog";

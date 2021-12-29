@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    @@include("_head.html", { "title": "Tamaka", })
-  </head>
 
-  <body>
-    <div class="wrapper">
-      @@include("_header.html", {})
-      <main class="main">
-        @@include("_collection.html", {}) @@include("_new.html", {})
-        @@include("_popular.html", {}) @@include("_info.html", {})
-      </main>
-      @@include("_footer.html", {})
-    </div>
+<head>
+  @@include("_head.html", { "title": "Tamaka", })
+</head>
 
-    @@include("_drawer.html", {}) @@include("_popup-search.html", {})
-    @@include("_js.html", {})
-  </body>
+<body>
+  <div class="wrapper">
+    @@include("_header.html", {})
+    <main class="main">
+      @@include("_collection.html", {}) @@include("_new.html", {})
+      @@include("_popular.html", { "title": "ПОПУЛЯРНЫЕ ПРЕДЛОЖЕНИЯ", }) @@include("_info.html", {})
+    </main>
+    @@include("_footer.html", {})
+  </div>
+
+  @@include("_drawer.html", {}) @@include("_popup-search.html", {})
+  @@include("_js.html", {})
+</body>
+
 </html>
