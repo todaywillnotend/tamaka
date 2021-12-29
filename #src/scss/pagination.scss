@@ -1,0 +1,19 @@
+.pagination {
+	a {
+		color: black;
+		float: left;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+
+	a.active {
+		background-color: #303030;
+		color: white;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

@@ -3,20 +3,25 @@
 		max-width: 950px;
 	}
 
-	.popular__card {
-		transition: 0.1s ease-in-out;
-		box-sizing: border-box;
-		margin: 10px 5px;
-		cursor: pointer;
+	.popular {
+		margin-bottom: 30px;
 
-		img {
-			max-width: 100%;
-		}
+		&__card {
+			transition: 0.1s ease-in-out;
+			box-sizing: border-box;
+			padding-bottom: 5px;
+			margin: 10px 5px;
+			cursor: pointer;
 
-		&:hover {
-			transform: translateY(-5px) scale(1.005);
-			box-shadow: 0px 0px 5px inset #dbdbdb;
-			// border: 1px solid #dbdbdb;
+			img {
+				max-width: 100%;
+			}
+
+			&:hover {
+				transform: translateY(-5px) scale(1.005);
+				box-shadow: 0px 0px 2px inset #dbdbdb;
+				// border: 1px solid #dbdbdb;
+			}
 		}
 	}
 }
