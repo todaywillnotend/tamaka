@@ -1146,6 +1146,7 @@ select {
   }
 
   .item__button {
+    padding: 12px 50px;
     width: 100%;
   }
 }
