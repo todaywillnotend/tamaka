@@ -1003,10 +1003,23 @@ select {
   margin-top: 16px;
 }
 
+.cart h1 {
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px 0;
+}
+
 .cart__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .cart__list {
@@ -1015,10 +1028,19 @@ select {
           flex-grow: 1;
 }
 
+.cart__amount button {
+  padding: 0 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+}
+
 .cart__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 20px;
 }
 
 .cart__item {
@@ -1066,6 +1088,63 @@ select {
 .cart__image {
   width: 195px;
   height: 100%;
+}
+
+.cart__checkbox {
+  margin-right: 10px;
+}
+
+.cart__checkbox input {
+  display: none;
+}
+
+.cart__checkbox input:checked + label {
+  background-image: url(../img/checked.svg);
+  background-repeat: no-repeat;
+}
+
+.cart__checkbox label {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 1px black;
+          box-shadow: 0 0 1px black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cart__button {
+  border: 1px solid #aaaaaa;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.cart__button button {
+  padding: 10px 20px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  -webkit-transition: 0.15s ease-in-out;
+  -o-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.cart__button button:hover {
+  background-color: black;
+  color: white;
+}
+
+.cart__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1290px) {
@@ -1161,6 +1240,11 @@ select {
     padding: 25px 0;
     font-size: 24px;
   }
+
+  .cart h1 {
+    padding: 25px 0;
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 775px) {
@@ -1211,6 +1295,15 @@ select {
   }
 
   .item__button {
+    padding: 12px 50px;
+    width: 100%;
+  }
+
+  .cart h1 {
+    font-size: 23px;
+  }
+
+  .cart__button button {
     padding: 12px 50px;
     width: 100%;
   }
@@ -1329,6 +1422,11 @@ select {
 
   .info__text p {
     font-size: 16px;
+  }
+
+  .cart h1 {
+    padding: 15px 0;
+    font-size: 17px;
   }
 }
 

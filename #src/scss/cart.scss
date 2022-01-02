@@ -1,14 +1,49 @@
 .cart {
+  h1 {
+    font-family: Cormorant Garamond;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+    padding: 30px 0;
+
+    @media (max-width: $width1024) {
+      padding: 25px 0;
+      font-size: 24px;
+    }
+    @media (max-width: $width768) {
+      font-size: 23px;
+    }
+
+    @media (max-width: $width425) {
+      padding: 15px 0;
+      font-size: 17px;
+    }
+  }
+
   &__content {
     display: flex;
+    align-items: flex-start;
   }
 
   &__list {
     flex-grow: 1;
   }
 
+  &__amount {
+    button {
+      padding: 0 10px;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      font-size: 20px;
+    }
+  }
+
   &__container {
     display: flex;
+    margin-bottom: 20px;
   }
 
   &__item {
@@ -54,5 +89,59 @@
     width: 195px;
     // height: 190px;
     height: 100%;
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+    input {
+      display: none;
+
+      &:checked + label {
+        background-image: url(../img/checked.svg);
+        background-repeat: no-repeat;
+        // background-size: cover;
+      }
+    }
+
+    label {
+      width: 24px;
+      height: 24px;
+      display: block;
+      border-radius: 2px;
+      box-shadow: 0 0 1px black;
+      box-sizing: border-box;
+      //   transition: 0.5s ease-in-out;
+    }
+  }
+
+  &__button {
+    border: 1px solid #aaaaaa;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 10px;
+
+    button {
+      padding: 10px 20px;
+      border: 1px solid #000000;
+      background-color: transparent;
+      transition: 0.15s ease-in-out;
+
+      @media (max-width: $width768) {
+        padding: 12px 50px;
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 }

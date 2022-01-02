@@ -15,7 +15,7 @@
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>Каталог Tamaka</title>
+  <title>Корзина</title>
 </head>
 </head>
 
@@ -72,7 +72,10 @@
 		<div class="cart__content">
 			<div class="cart__list">
 				<div class="cart__container">
-					<input type="checkbox" name="item1" id="item1">
+					<div class="cart__checkbox">
+						<input type="checkbox" name="item1" id="item1">
+						<label for="item1"></label>
+					</div>
 					<div class="cart__item">
 						<div class="cart__image">
 							<img src="img/cart-img.png" alt="">
@@ -89,9 +92,11 @@
 									2 399 рублей
 								</span>
 							</div>
-							<div class="cart__amout">
+							<div class="cart__amount">
 								<div class="cart__amount--title">Количество</div>
+								<button>-</button>
 								<span>2</span>
+								<button>+</button>
 							</div>
 							<div class="cart__total">
 								<div class="cart__total--title">Итого</div>
