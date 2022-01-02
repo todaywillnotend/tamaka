@@ -1,49 +1,117 @@
 .spoiler input,
 .spoiler div {
-  display: none; /* Скрываем содержимое */
-  transition: display 0.15s ease-in-out;
+	display: none; /* Скрываем содержимое */
+	transition: display 0.15s ease-in-out;
 }
 
 .spoiler label {
-  display: flex;
-  cursor: pointer;
+	display: flex;
+	cursor: pointer;
 }
 
 .spoiler label::before {
-  content: ''; /* Текст перед заголовком */
-  width: 25px;
-  height: 25px;
-  background-image: url(../img/arrow-top.svg);
-  transform: rotate(180deg);
-  background-repeat: no-repeat;
-  margin-right: 5px; /* Расстояние до текста */
-  transition: transform 0.15s ease-in-out;
+	content: ""; /* Текст перед заголовком */
+	width: 25px;
+	height: 25px;
+	background-image: url(../img/arrow-top.svg);
+	transform: rotate(180deg);
+	background-repeat: no-repeat;
+	margin-right: 5px; /* Расстояние до текста */
+	transition: transform 0.15s ease-in-out;
 }
 /* Открытый спойлер */
 .spoiler :checked + label::before {
-  transform: none;
+	transform: none;
 }
 .spoiler :checked ~ div {
-  display: block; /* Показываем спойлер */
-  padding: 10px; /* Поля вокруг текста */
+	display: block; /* Показываем спойлер */
+	padding: 10px; /* Поля вокруг текста */
 }
 
 .item {
-  margin: 30px 0;
+	margin: 30px 0;
 
-  .container {
-    max-width: 950px;
-  }
+	.container {
+		max-width: 950px;
+	}
 
-  &__content {
-    display: flex;
-    // justify-content: space-between;
-  }
+	&__content {
+		display: flex;
+		// justify-content: space-between;
 
-  &__image {
-    width: 400px;
-    height: 400px;
-    background-color: lightcoral;
-    margin-right: 80px;
-  }
+		@media (max-width: $width768) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__image {
+		width: 400px;
+		max-height: 400px;
+		// background-color: lightcoral;
+		margin-right: 80px;
+		overflow: hidden;
+
+		@media (max-width: $width768) {
+			margin: 0;
+			width: 90%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__main {
+		max-width: 45%;
+
+		@media (max-width: $width768) {
+			max-width: 90%;
+			width: 90%;
+		}
+	}
+
+	&__title {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+	}
+
+	&__price {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		margin-bottom: 13px;
+		margin-left: 5px;
+	}
+
+	&__button {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: black;
+		padding: 12px 60px;
+		border: 1px solid #000000;
+		text-transform: uppercase;
+		background-color: transparent;
+		transition: 0.15s ease-in-out;
+
+		@media (max-width: $width768) {
+			// padding: 12px 50px;
+			width: 100%;
+		}
+
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
+
+	&__desctiption {
+		margin-top: 16px;
+	}
+
+	&__delivery {
+		margin-top: 16px;
+	}
 }

@@ -41,19 +41,28 @@
       margin: 0 2.5px;
     }
 
-    &__img {
-      width: 100%;
-    }
+    // &__img {
+    //   width: 100%;
+    // }
 
-    img {
-      // width: 295px;
-      // height: 300px;
-      // object-fit: cover;
-      width: 100%;
-    }
+    // img {
+    //   // width: 295px;
+    //   // height: 300px;
+    //   // object-fit: cover;
+    //   width: 100%;
+    // }
 
     span {
       font-size: 16px;
     }
+  }
+
+  &__img {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
   }
 }
