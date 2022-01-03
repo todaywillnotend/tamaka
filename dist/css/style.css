@@ -1130,6 +1130,7 @@ select {
   -webkit-transition: 0.15s ease-in-out;
   -o-transition: 0.15s ease-in-out;
   transition: 0.15s ease-in-out;
+  cursor: pointer;
 }
 
 .cart__button button:hover {
@@ -1303,6 +1304,19 @@ select {
     font-size: 23px;
   }
 
+  .cart__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .cart__item {
+    text-align: center;
+  }
+
+  .cart__button {
+    width: 100%;
+  }
+
   .cart__button button {
     padding: 12px 50px;
     width: 100%;
@@ -1427,6 +1441,14 @@ select {
   .cart h1 {
     padding: 15px 0;
     font-size: 17px;
+  }
+
+  .cart__main {
+    font-size: 12px;
+  }
+
+  .cart__image {
+    width: 100%;
   }
 }
 
