@@ -1445,10 +1445,15 @@ select {
 
   .cart__main {
     font-size: 12px;
+    height: 100%;
   }
 
   .cart__image {
     width: 100%;
+  }
+
+  .cart__checkbox {
+    display: none;
   }
 }
 

@@ -53,7 +53,6 @@
   &__item {
     flex-grow: 1;
     display: flex;
-    // justify-content: space-between;
     align-items: flex-start;
     background-color: #f7f7f7;
     padding: 15px 20px;
@@ -74,6 +73,7 @@
 
     @media (max-width: $width425) {
       font-size: 12px;
+      height: 100%;
     }
 
     & > * {
@@ -84,22 +84,16 @@
   }
 
   &__text {
-    // margin-left: 10px;
   }
 
   &__title {
-    // margin-left: 10px;
-    // display: inline-block;
   }
 
   &__price {
-    // margin-left: 10px;
-    // display: inline-block;
   }
 
   &__image {
     width: 195px;
-    // height: 190px;
     height: 100%;
 
     @media (max-width: $width425) {
@@ -115,8 +109,11 @@
       &:checked + label {
         background-image: url(../img/checked.svg);
         background-repeat: no-repeat;
-        // background-size: cover;
       }
+    }
+
+    @media (max-width: $width425) {
+      display: none;
     }
 
     label {
@@ -126,7 +123,6 @@
       border-radius: 2px;
       box-shadow: 0 0 1px black;
       box-sizing: border-box;
-      //   transition: 0.5s ease-in-out;
     }
   }
 
