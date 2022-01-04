@@ -1318,7 +1318,7 @@ select {
   }
 
   .cart__button button {
-    padding: 12px 50px;
+    padding: 12px 0px;
     width: 100%;
   }
 }
