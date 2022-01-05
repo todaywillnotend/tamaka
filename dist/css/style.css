@@ -545,6 +545,7 @@ select {
 }
 
 .footer__top .contact {
+  padding: 0 10px;
   height: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -571,7 +572,18 @@ select {
 }
 
 .footer__top .contact .phone span {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 5px;
+}
+
+.footer__top .contact .phone span a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.footer__top .contact .email a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .footer__top .instagram {
