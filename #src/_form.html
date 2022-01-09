@@ -1,9 +1,22 @@
 <section class="form">
 	<div class="container">
 		<h1>ОФОРМЛЕНИЕ ЗАКАЗА</h1>
-		<div class="form__content">
+		<form class="form__content">
 			<div class="form__main">
+				<h2>КОНТАКТНЫЕ ДАННЫЕ</h2>
+				<div class="form__general">
+					<input type="text" name="Имя" placeholder="Имя">
+					<input type="text" name="Фамилия" placeholder="Фамилия"><br>
+					<input type="tel" name="Телефон" placeholder="Телефон">
+					<input type="email" name="Почта" placeholder="Почта"><br>
+				</div>
 
+				<div class="form__delivery">
+					<span>Адрес доставки</span>
+					<input type="text" name="Город, улица, дом" placeholder="Город, улица, дом">
+					<input type="number" name="Номер квартиры" placeholder="Номер квартиры">
+					<input type="number" name="Почтовый индекс" placeholder="Почтовый индекс">
+				</div>
 			</div>
 			<div class="form__button">
 				<div class="form__info">
@@ -16,6 +29,6 @@
 				</div>
 				<button>Оформить заказ</button>
 			</div>
-		</div>
+		</form>
 	</div>
 </section>
