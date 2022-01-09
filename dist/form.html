@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Оформление заказа</title>
+</head>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+  <div class="container">
+    <div class="header__content">
+      <div class="header__top">
+        <div class="category-buttons">
+          <div class="category-buttons__button">
+            <input id="male" class="category-buttons__radio" name="category" value="male" type="radio" />
+            <label for="male">Мужская</label>
+          </div>
+          <div class="category-buttons__button">
+            <input id="female" class="category-buttons__radio" name="category" value="female" type="radio" checked />
+            <label for="female">Женская</label>
+          </div>
+          <div class="category-buttons__burger">
+            <span></span>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="img/logo.svg" alt="logo" />
+        </div>
+        <div class="service">
+          <div class="search">
+            <input type="text" name="search" placeholder="Поиск по сайту" />
+            <div class="search-icon"></div>
+          </div>
+          <div class="shopping-cart">
+            <div class="shopping-cart__icon">
+              <img src="img/icon-shop.svg" alt="shopping-cart" />
+              <span>1</span>
+            </div>
+            <span class="shopping-cart__text">Корзина</span>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <a href="#">ВСЕ</a>
+        <a href="#">МЕДИЦИНСКАЯ ОЖЕЖДА</a>
+        <a href="#">ПОВСЕДНЕВНАЯ ОДЕЖДА</a>
+        <a href="#">ВЕЧЕРНЯЯ ОДЕЖДА</a>
+        <a href="#">АКСЕССУАРЫ</a>
+      </div>
+    </div>
+  </div>
+</header>
+		<main class="main">
+			<section class="form">
+	<div class="container">
+		<h1>ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+		<div class="form__content">
+			<div class="form__main">
+
+			</div>
+			<div class="form__button">
+				<div class="form__info">
+					<span>Итого</span>
+					<span>2 товара</span>
+				</div>
+				<div class="form__pay">
+					<span>К оплате</span>
+					<span>4 798 рублей</span>
+				</div>
+				<button>Оформить заказ</button>
+			</div>
+		</div>
+	</div>
+</section>
+		</main>
+		<footer class="footer">
+  <div class="footer__top">
+    <div class="contact">
+      <span>НУЖНА ПОМОЩЬ С ЗАКАЗОМ?</span>
+      <div class="phone">
+        <span><a href="tel:+78004653375">+7 800 465 33 75</a></span>
+        <!-- <span>+7 800 465 33 75</span> -->
+        <span><a href="tel:+78004653375">+7 800 465 33 75</a></span>
+        <!-- <span>+7 800 465 33 75</span> -->
+      </div>
+      <span class="email"><a href="mailto:doctorstr@mail.ru">doctorstr@mail.ru</a></span>
+    </div>
+    <div class="instagram">
+      <span>ПРИСОЕДИНЯЙТЕСЬ К НАМ</span>
+      <div class="link">
+        <img class="link__instagram--desktop" src="img/instagram.svg" alt="instagram" />
+        <img class="link__instagram--mobile" src="img/instagram-mobile.svg" alt="instagram" />
+        <span>Будь в курсе новых товаров.
+          Подписывайся на наш инстаграмм аккаунт</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <img src="img/logo.svg" alt="logo" />
+    <a href="#">Политика конфиденциальности</a>
+  </div>
+</footer>
+	</div>
+
+	<div class="drawer hidden-left">
+  <div class="drawer__content">
+    <div class="category-buttons category-buttons--drawer">
+      <div class="category-buttons__button">
+        <input
+          id="male-drawer"
+          class="category-buttons__radio"
+          name="category-drawer"
+          value="male"
+          type="radio"
+        />
+        <label for="male-drawer">Мужская</label>
+      </div>
+      <div class="category-buttons__button">
+        <input
+          id="female-drawer"
+          class="category-buttons__radio"
+          name="category-drawer"
+          value="female"
+          type="radio"
+          checked
+        />
+        <label for="female-drawer">Женская</label>
+      </div>
+    </div>
+    <div class="category-list">
+      <a href="#" class="category-list__item">МЕДИЦИНСКАЯ ОЖЕЖДА</a>
+      <a href="#" class="category-list__item">ПОВСЕДНЕВНАЯ ОДЕЖДА</a>
+      <a href="#" class="category-list__item">ВЕЧЕРНЯЯ ОДЕЖДА</a>
+      <a href="#" class="category-list__item">АКСЕССУАРЫ</a>
+    </div>
+  </div>
+  <div class="drawer__void hidden"></div>
+</div>
+ <div class="popup-search hidden-top">
+  <div class="popup-search__content">
+    <input type="text" name="search" placeholder="Поиск по сайту" />
+    <div class="popup-search__icon-search"></div>
+    <div class="popup-search__button-close">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
